@@ -1325,7 +1325,9 @@ async def _cb_accept_one(q, ctx, target_id: int):
 
     text, ents = fmt_accepted_msg(first_name)
     await safe_send(ctx, target_id, text, entities=ents)
-    await copy_channel_messages_to_user(ctx, target_id)
+    # FIX: Do not copy host-channel forward messages here.
+    # They are already sent on join request and/or by the chat_member join event.
+    # Sending them here caused duplicate forwards when an admin picked/accepted a request.
 
     try:
         await q.edit_message_text(
@@ -1450,7 +1452,8 @@ async def _cb_accept_all(q, ctx):
 
         text, ents = fmt_accepted_msg(first_name)
         await safe_send(ctx, uid, text, entities=ents)
-        await copy_channel_messages_to_user(ctx, uid)
+        # FIX: Do not copy host-channel forward messages here.
+        # The join request/join event handles the copy, preventing duplicate forwards.
         await asyncio.sleep(0.2)
 
     save_data(bot_data)
@@ -2273,7 +2276,8 @@ async def cmd_accept(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
 
     text, ents = fmt_accepted_msg(first_name)
     await safe_send(ctx, uid, text, entities=ents)
-    await copy_channel_messages_to_user(ctx, uid)
+    # FIX: Do not copy host-channel forward messages here.
+    # This prevents duplicate forwards when /accept approves a picked request.
     await update.message.reply_text(
         f"{E_CHECK} User {uid} accepted!", parse_mode=ParseMode.HTML
     )
@@ -2380,7 +2384,8 @@ async def cmd_acceptall(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
         ok += 1
         text, ents = fmt_accepted_msg(first_name)
         await safe_send(ctx, uid, text, entities=ents)
-        await copy_channel_messages_to_user(ctx, uid)
+        # FIX: Do not copy host-channel forward messages here.
+        # The join request/join event handles the copy, preventing duplicate forwards.
         await asyncio.sleep(0.2)
     bot_data["pending_requests"].clear()
     save_data(bot_data)
