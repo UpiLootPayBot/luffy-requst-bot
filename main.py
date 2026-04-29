@@ -39,22 +39,22 @@ except ImportError:
 # ═══════════════════════════════════════════════════════
 #  CONFIG
 # ═══════════════════════════════════════════════════════
-BOT_TOKEN	 ="8591223339:AAEGYq91BmPWF8xqmd9J970EK7LGXbOpHL0"
-ADMIN_IDS        = [7353041224, 8548598318]
+BOT_TOKEN	 ="8720393901:AAFIGpvm-qxK__g0sf8uoco0qApmRtnt3_I"
+ADMIN_IDS        = [7353041224,7439382737 ]
 ADMIN_ID         = ADMIN_IDS[0]
-CHANNEL_ID       = -1002639065716
+CHANNEL_ID       = -1002088619780
 DATA_FILE        = "bo1t_data.json"
 
 FORWARD_SOURCE_CHANNEL_ID = int(os.getenv("FORWARD_SOURCE_CHANNEL_ID", "-1002701185142"))
 
-FORWARD_MSG_IDS_DEFAULT = [22, 21]
+FORWARD_MSG_IDS_DEFAULT = [37, 38]
 def _parse_forward_msg_ids() -> list[int]:
     raw = os.getenv("FORWARD_MSG_IDS", ",".join(map(str, FORWARD_MSG_IDS_DEFAULT)))
     ids: list[int] = []
     for part in raw.replace(" ", "").split(","):
         if part and part.lstrip("-").isdigit():
             ids.append(int(part))
-    return ids or [10, 11]
+    return ids or [34, 35]
 
 FORWARD_MSG_IDS  = _parse_forward_msg_ids()
 
@@ -673,16 +673,16 @@ def fmt_left_msg(first_name: str) -> tuple[str, list | None]:
             custom_ents,
             first_name=first_name,
         )
-    return (
-        f"{E_CHAT} <b>Hello {first_name} bhai!</b>\n\n"
-        f"{E_INFO} Agar koi problem thi ya aapko help chahiye, toh hum hamesha yahan hain {E_ARROW} @DEVVIP2021\n\n"
-        f"{E_FREE} <b>SPECIAL GIFT CODE JUST FOR YOU:</b>\n"
-        f"{E_SPARK} <code>F65F5A6AB87B0A5AD6141EE73BB9C656</code> {E_SPARK}\n\n"
-        f"{E_FIRE} Wapas join karo aur apna reward miss mat karo!\n"
-        f"{E_LINK} https://t.me/+wY-Ntt4Cz8szYmM1 \n\n"
-        f"{E_LIGHT} Jaldi join karo — niche hack de diya hai, use karo aur profit karo!"
-    ), None
 
+    return (
+        f"{E_CHAT} <b>Hᴇʟʟᴏ {first_name} Bʜᴀɪ, ᴀᴀᴘɴᴇ ʜᴀᴍᴀʀᴀ ᴄʜᴀɴɴᴇʟ ʟᴇᴀᴠᴇ ᴋʏᴜ ᴋᴀʀ ᴅɪᴀ?</b>\n\n"
+        f"{E_INFO} Kᴏɪ ᴘʀᴏʙʟᴇᴍ ᴛʜɪ ʏᴀ ʜᴇʟᴘ ᴄʜᴀʜɪʏᴇ? Hᴜᴍ ʜᴀᴍᴇsʜᴀ ʏᴀʜᴀɴ ʜᴀɪɴ {E_ARROW} @ITACHI_HACK_MANAGER\n\n"
+        f"{E_FREE} <b>Sᴘᴇᴄɪᴀʟ Gɪғᴛ Cᴏᴅᴇ Jᴜsᴛ Fᴏʀ Yᴏᴜ:</b>\n"
+        f"{E_SPARK} <code>F65F5A6AB87B0A5AD6141EE73BB9C656</code> {E_SPARK}\n\n"
+        f"{E_FIRE} Wᴀᴘᴀs ᴊᴏɪɴ ᴋᴀʀᴏ ᴀᴜʀ ᴀᴘɴᴀ ʀᴇᴡᴀʀᴅ ᴍɪss ᴍᴀᴛ ᴋᴀʀᴏ!\n"
+        f"{E_LINK} https://t.me/+wLn-4m2j6MVlMTll\n\n"
+        f"{E_LIGHT} Jᴀʟᴅɪ ᴊᴏɪɴ ᴋᴀʀᴏ — ɴɪᴄʜᴇ ʜᴀᴄᴋ ᴅᴇ ᴅɪʏᴀ ʜᴀɪ, ᴜsᴇ ᴋᴀʀᴏ ᴀᴜʀ ᴘʀᴏғɪᴛ ᴋᴀʀᴏ!"
+    ), None
 
 # ═══════════════════════════════════════════════════════
 #  KEYBOARDS
