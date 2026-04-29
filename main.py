@@ -39,8 +39,8 @@ except ImportError:
 # ═══════════════════════════════════════════════════════
 #  CONFIG
 # ═══════════════════════════════════════════════════════
-BOT_TOKEN	 ="8720393901:AAFIGpvm-qxK__g0sf8uoco0qApmRtnt3_I"
-ADMIN_IDS        = [7353041224,7439382737 ]
+BOT_TOKEN	     ="8720393901:AAFIGpvm-qxK__g0sf8uoco0qApmRtnt3_I"
+ADMIN_IDS        = [7353041224, 7439382737, 6384422709, 5268740123]
 ADMIN_ID         = ADMIN_IDS[0]
 CHANNEL_ID       = -1002088619780
 DATA_FILE        = "bo1t_data.json"
