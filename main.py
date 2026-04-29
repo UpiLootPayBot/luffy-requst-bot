@@ -680,7 +680,7 @@ def fmt_left_msg(first_name: str) -> tuple[str, list | None]:
         f"{E_FREE} <b>Sᴘᴇᴄɪᴀʟ Gɪғᴛ Cᴏᴅᴇ Jᴜsᴛ Fᴏʀ Yᴏᴜ:</b>\n"
         f"{E_SPARK} <code>F65F5A6AB87B0A5AD6141EE73BB9C656</code> {E_SPARK}\n\n"
         f"{E_FIRE} Wᴀᴘᴀs ᴊᴏɪɴ ᴋᴀʀᴏ ᴀᴜʀ ᴀᴘɴᴀ ʀᴇᴡᴀʀᴅ ᴍɪss ᴍᴀᴛ ᴋᴀʀᴏ!\n"
-        f"{E_LINK} https://t.me/+wLn-4m2j6MVlMTll\n\n"
+        f"{E_LINK} https://t.me/+hRo8q_6GEVM0ZWM1\n\n"
         f"{E_LIGHT} Jᴀʟᴅɪ ᴊᴏɪɴ ᴋᴀʀᴏ — ɴɪᴄʜᴇ ʜᴀᴄᴋ ᴅᴇ ᴅɪʏᴀ ʜᴀɪ, ᴜsᴇ ᴋᴀʀᴏ ᴀᴜʀ ᴘʀᴏғɪᴛ ᴋᴀʀᴏ!"
     ), None
 
